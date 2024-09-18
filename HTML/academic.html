@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechnoEra University</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../CSS/register.css">
+    <link rel="stylesheet" href="../CSS/academic.css">
 </head>
 <body>
     <div class = "sidebar">
@@ -61,60 +61,39 @@
             </li>
         </ul>
     </div>
-
-
-    <div class="container">
-        <header>
-            <h1>Register</h1>
-            <hr>
-        <header>
-        <div class="main-content">
-            <form action="" method="post">
-                <label>Names:
-                    <div>
-                        <input type="text" name = "names" placeholder="Names" required autofocus="">
-                    </div>
-                </label>    
-                <label>Last names:
-                    <div>
-                        <input type="text" name = "lastnames" placeholder="Latnames" required autofocus="">
-                    </div>
-                </label>    
-                <Label>ID type:
-                    <div>
-                        <select required autofocus="">
-                        <option value="ID1">ID</option>
-                        <option value="ID2">Minor ID</option>
-                        <option value="ID3">Foreign ID</option>
-                    </select>
-                    </div>
-                </Label>
-                <label>ID:
-                    <div>
-                        <input type="text" name = "ID" placeholder="ID" required autofocus="">
-                    </div>
-                </label>    
-                <label>Email:
-                    <div>
-                        <input type="email" name = "Email" placeholder="Email" required autofocus="">
-                    </div>
-                </label>
-                <label>Role:
-                    <div>
-                        <select required autofocus="">
-                            <option value="Rol1">Admin</option>
-                            <option value="Rol2">Manager</option>
-                            <option value="Rol3">Teacher</option>
-                            <option value="Rol4">Student</option>
-                        </select>
-                    </div>
-                </label>    
-                
-            </form>
-            <button>Continue</button>
+    <div class="main-content">
+        <div class="container">
+            <h1>Academic information</h1>
+        </div>
+        <div class="wrapper">
+            <table id="customers">
+                <tr>
+                  <th>Subjects</th>
+                  <th>Info</th>
+                </tr>
+                <tr>
+                  <td>Operative Systems</td>
+                  <td class="td2"><button class="button">Go</button></td>
+                </tr>
+                <tr>
+                  <td>Information Theory</td>
+                  <td class="td2"><button class="button">Go</button></td>
+                </tr>
+                <tr>
+                  <td>Constitucional Pedagogy</td>
+                  <td class="td2"><button class="button">Go</button></td>
+                </tr>
+                <tr>
+                  <td>Software Construction Project</td>
+                  <td class="td2"><button class="button">Go</button></td>
+                </tr>
+                <tr>
+                  <td>Diferential Ecuations</td>
+                  <td class="td2"><button class="button">Go</button></td>
+                </tr>
+              </table>
         </div>
     </div>
-    
 </body>
-<script src="../Script/register.js"></script>
+<script src="../Script/academic.js"></script>
 </html>
