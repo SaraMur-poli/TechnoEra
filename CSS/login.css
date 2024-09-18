@@ -81,6 +81,8 @@ body
     margin: 10px;
 }
 
-.content img{
-    text-align: center;
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
