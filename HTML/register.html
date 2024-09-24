@@ -69,20 +69,20 @@
             <hr>
         <header>
         <div class="main-content">
-            <form action="" method="post">
+            <form action="http://localhost:3000/register" method="post" id="formRegister">
                 <label>Names:
                     <div>
-                        <input type="text" name = "names" placeholder="Names" required autofocus="">
+                        <input type="text" name = "name" placeholder="Names" required autofocus="">
                     </div>
                 </label>    
                 <label>Last names:
                     <div>
-                        <input type="text" name = "lastnames" placeholder="Latnames" required autofocus="">
+                        <input type="text" name = "lastName" placeholder="Latnames" required autofocus="">
                     </div>
                 </label>    
-                <Label>ID type:
+                <Label >ID type:
                     <div>
-                        <select required autofocus="">
+                        <select name="idType" autofocus="">
                         <option value="ID1">ID</option>
                         <option value="ID2">Minor ID</option>
                         <option value="ID3">Foreign ID</option>
@@ -96,25 +96,27 @@
                 </label>    
                 <label>Email:
                     <div>
-                        <input type="email" name = "Email" placeholder="Email" required autofocus="">
+                        <input type="email" name = "email" placeholder="Email" required autofocus="">
                     </div>
                 </label>
                 <label>Role:
                     <div>
-                        <select required autofocus="">
-                            <option value="Rol1">Admin</option>
-                            <option value="Rol2">Manager</option>
-                            <option value="Rol3">Teacher</option>
-                            <option value="Rol4">Student</option>
+                        <select name="role" autofocus="">
+                            <option value="Admin">Admin</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Student">Student</option>
                         </select>
                     </div>
                 </label>    
                 
             </form>
-            <button>Continue</button>
+            <button form="formRegister" type="submit">Continue</button>
         </div>
     </div>
     
 </body>
+<script src="../Script/menu.js"></script>
 <script src="../Script/register.js"></script>
+
 </html>
