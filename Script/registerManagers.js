@@ -21,12 +21,12 @@ db.connect((err) => {
     console.log('Conecting MySQL database ');
 });
 
-app.post('/registerTeachers', (req, res) => {
-    const { names, lastNames, idType, id, email, gender, dateOfBirth, address, cellNumber, typeOfContract, userName, password } = req.body;
+app.post('/registerManagers', (req, res) => {
+    const { names, lastNames, idType, id, email, gender, dateOfBirth, address, cellNumber, office, userName, password } = req.body;
 
     console.log('Data received', req.body);
 
-    let search = "SELECT * FROM teachers WHERE id =" + id + "";
+    let search = "SELECT * FROM managers WHERE id =" + id + "";
     db.query(search, function(error,row){
         if(error){
             throw error;
@@ -34,8 +34,8 @@ app.post('/registerTeachers', (req, res) => {
             if(row.length>0){
                 console.log("The user already exists");
             }else{
-                const sql = 'INSERT INTO teachers ( names, lastNames, idType, id, email, gender, dateOfBirth, address, cellNumber, typeOfContract, userName, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-                db.query(sql, [ names, lastNames, idType, id, email, gender, dateOfBirth, address, cellNumber, typeOfContract, userName, password], (err, result) => {
+                const sql = 'INSERT INTO managers ( names, lastNames, idType, id, email, gender, dateOfBirth, address, cellNumber, office, userName, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+                db.query(sql, [ names, lastNames, idType, id, email, gender, dateOfBirth, address, cellNumber, office, userName, password], (err, result) => {
                     if (err) {
                         console.error('Error inserting data:', err);
                         return res.send(500).json('Error registering user');

@@ -41,7 +41,7 @@ app.post('/registerStudents', (req, res) => {
                         return res.send(500).json('Error registering user');
 
                     } else {
-                        return res.send('User successfully registered');
+                        return res.status(200).send('User successfully registered');
                     }
                 });
             }

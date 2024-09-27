@@ -69,7 +69,7 @@
             <hr>
         <header>
         <div class="main-content">
-            <form action="" method="post" id="registerManagers">
+            <form action="http://localhost:3000/registerManagers" method="post" id="registerManagers">
                 <label>Names:
                     <div>
                         <input type="text" name = "names" placeholder="Names" required autofocus="">
@@ -101,31 +101,31 @@
                 </label>
                 <label>Gender:
                     <div>
-                        <select required autofocus="">
-                            <option value="G1">Femenine</option>
-                            <option value="G2">Masculine</option>
-                            <option value="G3">Another</option>
+                        <select name="gender" required autofocus="">
+                            <option value="F">Femenine</option>
+                            <option value="M">Masculine</option>
+                            <option value="O">Other</option>
                         </select>
                     </div>
                 </label>    
                 <label>Date of birth:
                     <div>
-                        <input type="date" id= "DateOfBirth" placeholder="Date of birth" required autofocus="">
+                        <input type="date" name = "dateOfBirth" placeholder="Date of birth" required autofocus="">
                     </div>
                 </label>    
                 <Label>Address:
                     <div>
-                        <input type="text" name= "Address" placeholder="Address" required autofocus="">
+                        <input type="text" name= "address" placeholder="Address" required autofocus="">
                     </div>
                 </Label>
                 <label>Cell number:
                     <div>
-                        <input type="tel" name = "Cell" placeholder="Cell number" required autofocus="">
+                        <input type="tel" name = "cellNumber" placeholder="Cell number" required autofocus="">
                     </div>
                 </label>   
                 <label>Office:
                     <div>
-                        <select required autofocus="">
+                        <select name="office" required autofocus="">
                             <option value="1">Administrative</option>
                             <option value="2">Dean</option>
                             <option value="2">Rector</option> 
@@ -134,18 +134,19 @@
                 </label>
                 <label>User name:
                     <div>
-                    <input type="text" name = "User name" placeholder="User name" required autofocus="" >
+                    <input type="text" name = "userName" placeholder="User name" required autofocus="" >
                     </div>
                 </label>
                 <label>Password:
                     <div>
-                    <input type="password" name = "Credits" placeholder="Password" required autofocus="" min="0">
+                    <input type="password" name = "password" placeholder="Password" required autofocus="" min="0">
                     </div>
                 </label> 
             </form>
-            <button type="submit" form="registerManagers">To send</button>
+            <button type="submit" form="registerManagers">  Send</button>
         </div>
     </div>
 </body>
 <script src="../Script/menu.js"></script>
+<script src="../Script/registerManagers.js"></script>
 </html>
