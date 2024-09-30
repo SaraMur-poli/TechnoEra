@@ -26,13 +26,14 @@ app.post('/registerTeachers', (req, res) => {
 
     console.log('Data received', req.body);
 
-    let search = "SELECT * FROM teachers WHERE id =" + id + "";
-    db.query(search, function(error,row){
+    let search = `SELECT * FROM teachers WHERE userName = ? OR id = ?`;
+    db.query(search, [userName, id], function(error,row){
         if(error){
             throw error;
         }else{
             if(row.length>0){
                 console.log("The user already exists");
+                return res.status(400).json('The user already exists');
             }else{
                 const sql = 'INSERT INTO teachers ( names, lastNames, idType, id, email, gender, dateOfBirth, address, cellNumber, typeOfContract, userName, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
                 db.query(sql, [ names, lastNames, idType, id, email, gender, dateOfBirth, address, cellNumber, typeOfContract, userName, password], (err, result) => {
