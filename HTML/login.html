@@ -13,8 +13,18 @@
                 <div class = "content">
                     <img src="../images/LOGO.png" alt="logo">
                     <h1>TechnoEra University</h1>
-                    <form action="" method="post">
-                        <input type="text" name = "user name" placeholder="User name" required autofocus="">
+                    <form action="http://localhost:3000/login" method="post">
+                        <label for="role">
+                            <select name="role">
+                                <option value="1">Student</option>
+                                <option value="2">Teacher</option>
+                                <option value="3">Manager</option>
+                                <option value="4">Admin</option>
+                            </select>
+                        </label>
+                        <label for="userName"></label>
+                        <input type="text" name = "userName" placeholder="User name" required autofocus="">
+                        <label for="password"></label>
                         <input type="password" name = "password" placeholder="User Password" required autofocus="">
                         <p class="account">Forgot your password?<a href="forgotpassword.html">Click here</a></p>
                         <button class = "btn" type="submit">
@@ -22,9 +32,9 @@
                         </button>
                     </form>
                 </div>   
-                
             </div>
         </div>
     </div>
 </body>
+<script src="../Script/login.js"></script>
 </html>
