@@ -5,3 +5,7 @@ btn.onclick = function()
 {
     sidebar.classList.toggle('active');
 };
+
+document.getElementById('registration').addEventListener('click', function() {
+    window.location.href = '../HTML/register.html';
+});
