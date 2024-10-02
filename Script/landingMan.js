@@ -20,4 +20,4 @@ document.getElementById('user-image').addEventListener('click', function() {
 
 document.getElementById('logout').addEventListener('click', function() {
     window.location.href = '../HTML/login.html';
-  });
+});

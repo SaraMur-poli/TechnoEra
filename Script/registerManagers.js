@@ -55,3 +55,19 @@ app.post('/registerManagers', (req, res) => {
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
 });
+
+document.getElementById('registration').addEventListener('click', function() {
+    window.location.href = '../HTML/subjects.html';
+});
+
+document.getElementById('enrollment').addEventListener('click', function() {
+    window.location.href = '../HTML/registerCreate.html';
+});
+
+document.getElementById('user-image').addEventListener('click', function() {
+    window.location.href = '../HTML/landingMan.html';
+});
+
+document.getElementById('logout').addEventListener('click', function() {
+    window.location.href = '../HTML/login.html';
+  });
