@@ -7,6 +7,10 @@ btn.onclick = function()
     sidebar.classList.toggle('active');
 };
 
+document.getElementById('profile').addEventListener('click', function() {
+    window.location.href = 'http://127.0.0.1:5500/profile';
+});
+
 document.getElementById('registration').addEventListener('click', function() {
     window.location.href = '../HTML/register.html';
 });
