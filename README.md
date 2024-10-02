@@ -1,4 +1,4 @@
-#TechnoEra
+# TechnoEra
 We create TechnoEra from an university asignation where we recreate our university's web site. The web has many roles and of course different access for all of them.
 
 ## Índice
@@ -44,11 +44,11 @@ As a pre-parameter you'll have to install some programs such as:
 9. Click on the "Crear" button
 10. On the left part you'll see the name of the DB, click on it and create a table
 11. Tables should look like this:
-    - ![Admins table](images/admins.jpg)
-    - ![Managers table](images/managers.jpg)
-    - ![Students table](images/students.jpg)
-    - ![Teachers table](images/teachers.jpg)
-    - ![Subject table](images/subjects.jpg)
+    - Admins table: ![Admins table](images/admins.jpg)
+    - Managers table: ![Managers table](images/managers.jpg)
+    - Students table: ![Students table](images/students.jpg)
+    - Teachers table: ![Teachers table](images/teachers.jpg)
+    - Subjects table: ![Subject table](images/subjects.jpg)
 12. Go to visual again and on the terminal:
     - If you want to login use "node ./Script/app.js"
     - If you want to create an user, based on the roll you'll use:
