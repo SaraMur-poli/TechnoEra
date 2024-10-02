@@ -6,6 +6,22 @@ btn.onclick = function()
     sidebar.classList.toggle('active');
 };
 
+document.getElementById('user-image').addEventListener('click', function() {
+    window.location.href = '../HTML/landingMan.html';
+  });
+  
+  document.getElementById('registration').addEventListener('click', function() {
+    window.location.href = '../HTML/subjects.html';
+  });
+  
+  document.getElementById('enrollment').addEventListener('click', function() {
+    window.location.href = '../HTML/registerCreate.html';
+  });
+  
+  document.getElementById('logout').addEventListener('click', function() {
+    window.location.href = '../HTML/login.html';
+  });
+
 document.getElementById('sForm').addEventListener('submit', function(event) {
     const checkboxes = document.querySelectorAll('input[name="option"]:checked');
     const errorMessage = document.getElementById('error-message');
