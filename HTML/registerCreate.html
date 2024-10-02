@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoEra University</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/subjects.css">
+</head>
+<body>
+    <div class = "sidebar">
+        <div class = "top">
+            <div class="logo">
+                <i class = "bx bxl-codepen"></i>
+                <span>TechnoEra</span>
+            </div>
+            <i class = "bx bx-menu" id = "btn"></i>
+        </div>
+        <div class="user">
+            <img src="../images/user-image.jpg" alt="userpht" class = "user-img">
+            <div>
+                <p class = "bold">Username</p>
+                <p>Rol</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class = "bx bx-user-pin"></i>
+                    <span class= "nav-item">Profile</span>
+                </a>
+                <span class = "tooltip">Profile</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class = "bx bx-book-open"></i>
+                    <span class= "nav-item">Academic</span>
+                </a>
+                <span class = "tooltip">Academic</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class = "bx bx-list-check"></i>
+                    <span class= "nav-item">Attendance</span>
+                </a>
+                <span class = "tooltip">Attendance</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class = "bx bx-log-out"></i>
+                    <span class= "nav-item">Logout</span>
+                </a>
+                <span class = "tooltip">Logout</span>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+            <header>
+                <h1>Create subject register</h1>
+                <hr>
+            </header>
+        <div class="container">
+            <form id="sForm" action="" method="post"> 
+                <label>Student ID:
+                    <div>
+                        <input type="text" id="sID" placeholder="ID" required autofocus="">
+                    </div>
+                </label>
+                <label>Student name:
+                    <div>
+                        <input type="text" id="sName" placeholder="Name" required autofocus="">
+                    </div>
+                </label>
+                <label>Select the day:
+                    <div class="select">
+                        <input type="checkbox" name="option">
+                        <label>Monday</label>
+                        <input type="checkbox" name="option">
+                        <label>Tuesday</label>
+                        <input type="checkbox" name="option">
+                        <label>Wednesday</label>
+                        <input type="checkbox" name="option">
+                        <label>Thursday</label>
+                        <input type="checkbox" name="option">
+                        <label>Friday</label>
+                        <input type="checkbox" name="option">
+                        <label>Satuday</label>
+                    </div>
+                </label>
+                <label>Hour:
+                    <input type="time" id="sTime" required autofocus="">
+                </label>
+                <button type="submit">Submit</button>  
+                <p id="error-message" style="color: red;"></p> 
+            </form>
+        </div>
+    </div>
+    
+</body>
+<script src="../Script/subjects.js"></script>
+</html>
