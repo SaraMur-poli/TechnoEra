@@ -7,6 +7,14 @@ btn.onclick = function()
     sidebar.classList.toggle('active');
 };
 
+document.getElementById('registration').addEventListener('click', function() {
+    window.location.href = '../HTML/register.html';
+});
+
+document.getElementById('logout').addEventListener('click', function() {
+    window.location.href = '../HTML/login.html';
+});
+
 document.getElementById('btnS').addEventListener('click', function() {
     window.location.href = '../HTML/registerStudent.html';
 });
