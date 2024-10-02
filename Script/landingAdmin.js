@@ -11,7 +11,7 @@ document.getElementById('registration').addEventListener('click', function() {
 });
 
 document.getElementById('profile').addEventListener('click', function() {
-    window.location.href = '../views/profile.ejs';
+    window.location.href = 'http://localhost:3000/profile';
 });
 
 document.getElementById('logout').addEventListener('click', function() {

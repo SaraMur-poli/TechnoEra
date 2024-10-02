@@ -6,6 +6,10 @@ btn.onclick = function()
     sidebar.classList.toggle('active');
 };
 
+document.getElementById('profile').addEventListener('click', function() {
+  window.location.href = 'http://localhost:3000/profile';
+});
+
 document.getElementById('user-image').addEventListener('click', function() {
     window.location.href = '../HTML/landingMan.html';
   });
