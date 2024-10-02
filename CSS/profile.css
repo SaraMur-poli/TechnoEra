@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente principal */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar padding por defecto */
+  }
+  
+  /* Contenedor del perfil */
+  .profile-container {
+    width: 80%; /* Ancho del contenedor */
+    max-width: 600px; /* Ancho máximo */
+    margin: 50px auto; /* Centrar el contenedor */
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Padding interno */
+  }
+  
+  /* Estilo del encabezado */
+  h1 {
+    color: #333; /* Color del texto del encabezado */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Margen inferior */
+  }
+  
+  /* Detalles del perfil */
+  .profile-details {
+    margin-top: 20px; /* Margen superior */
+  }
+  
+  /* Estilo de los párrafos dentro del perfil */
+  .profile-details p {
+    font-size: 18px; /* Tamaño de la fuente */
+    margin: 10px 0; /* Margen superior e inferior */
+    color: #555; /* Color del texto */
+  }
+  
+  /* Estilo del botón */
+  button {
+    padding: 10px 15px; /* Padding interno */
+    background-color: #007BFF; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de la fuente */
+    display: block; /* Hacer que el botón ocupe todo el ancho disponible */
+    margin: 20px auto; /* Centrar el botón */
+  }
+  
+  /* Efecto hover para el botón */
+  button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el cursor */
+  }

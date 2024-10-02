@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/profile.css">
+  <title>Perfil de <%= user.userName %></title>
+</head>
+<body>
+  <div class="profile-container">
+    <h1>Perfil de <%= user.userName %></h1>
+    <div class="profile-details">
+      <% if (role === 'student') { %>
+        <label>Names:
+          <p> <%= info.names %></p>
+        </label>
+        <label>Last Names:
+          <p> <%= info.lastNames %></p>
+        </label>
+        <label>ID type:
+          <p> <%= info.idType %></p>
+        </label>
+        <label>ID:
+          <p> <%= info.id %></p>
+        </label>
+        <label>Email::
+          <p> <%= info.email %></p>
+        </label>
+        <label>Gender:
+          <p> <%= info.gender %></p>
+        </label>
+        <label>Date of birth:
+          <p> <%= info.dateOfBirth %></p>
+        </label>
+        <label>Address:
+          <p> <%= info.address %></p>
+        </label>
+        <label>Cell number:
+          <p> <%= info.cellNumber %></p>
+        </label>
+        <label>Academic program:
+          <p> <%= info.academicProgram %></p>
+        </label>
+        <label>Date of admission:
+          <p> <%= info.dateOfAdmission %></p>
+        </label>
+        <label>Number of credits:
+          <p> <%= info.numberOfCredits %></p>
+        </label>
+        <button onclick="location.href='http://127.0.0.1:5500/HTML/landing.html'">Back</button>
+        <button onclick="location.href='http://localhost:3000/updateProfile.ejs'">Profile editor</button>
+      
+      <% } else if (role === 'teacher') { %>
+        <label>Names:
+          <p> <%= info.names %></p>
+        </label>
+        <label>Last Names:
+          <p> <%= info.lastNames %></p>
+        </label>
+        <label>ID type:
+          <p> <%= info.idType %></p>
+        </label>
+        <label>ID:
+          <p> <%= info.id %></p>
+        </label>
+        <label>Email::
+          <p> <%= info.email %></p>
+        </label>
+        <label>Gender:
+          <p> <%= info.gender %></p>
+        </label>
+        <label>Date of birth:
+          <p> <%= info.dateOfBirth %></p>
+        </label>
+        <label>Address:
+          <p> <%= info.address %></p>
+        </label>
+        <label>Cell number:
+          <p> <%= info.cellNumber %></p>
+        </label>
+        <label>Type of contract:
+          <p> <%= info.typeOfContract %></p>
+        </label>
+        <button onclick="location.href='http://127.0.0.1:5500/HTML/landingTech.html'">Back</button>
+        <button>Profile editor</button>
+
+      <% } else if (role === 'manager') { %>
+        <label>Names:
+          <p> <%= info.names %></p>
+        </label>
+        <label>Last Names:
+          <p> <%= info.lastNames %></p>
+        </label>
+        <label>ID type:
+          <p> <%= info.idType %></p>
+        </label>
+        <label>ID:
+          <p> <%= info.id %></p>
+        </label>
+        <label>Email::
+          <p> <%= info.email %></p>
+        </label>
+        <label>Gender:
+          <p> <%= info.gender %></p>
+        </label>
+        <label>Date of birth:
+          <p> <%= info.dateOfBirth %></p>
+        </label>
+        <label>Address:
+          <p> <%= info.address %></p>
+        </label>
+        <label>Cell number:
+          <p> <%= info.cellNumber %></p>
+        </label>
+        <label>Office:
+          <p> <%= info.office %></p>
+        </label>
+        <button onclick="location.href='http://127.0.0.1:5500/HTML/landingMan.html'">Back</button>
+        <button>Profile editor</button>
+
+      <% } else if (role === 'admin') { %>
+        <label>Names:
+          <p> <%= info.names %></p>
+        </label>
+        <label>Last Names:
+          <p> <%= info.lastNames %></p>
+        </label>
+        <label>ID type:
+          <p> <%= info.idType %></p>
+        </label>
+        <label>ID:
+          <p> <%= info.id %></p>
+        </label>
+        <label>Email::
+          <p> <%= info.email %></p>
+        </label>
+        <label>Gender:
+          <p> <%= info.gender %></p>
+        </label>
+        <label>Date of birth:
+          <p> <%= info.dateOfBirth %></p>
+        </label>
+        <label>Address:
+          <p> <%= info.address %></p>
+        </label>
+        <label>Cell number:
+          <p> <%= info.cellNumber %></p>
+        </label>
+        <button onclick="location.href='http://127.0.0.1:5500/HTML/landingAdmin.html'">Back</button>
+        <button>Profile editor</button>
+
+      <% } %>
+    </div>
+    
+  </div>
+  <script src="../Script/profile.js"></script>
+</body>
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif; 
+    background-color: #134e70;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile-container {
+    width: 80%; 
+    max-width: 600px; 
+    margin: 50px auto; 
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+  }
+  
+  
+  h1 {
+    color:#134e70;
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+
+  label{
+    color: #134e70;
+  }
+  
+  
+  .profile-details {
+    margin-top: 20px; 
+    column-count: 2; 
+    column-gap: 20px;
+  }
+  
+  
+  .profile-details p {
+    font-size: 18px;
+    margin: 10px 0; 
+    color: black; 
+  }
+  
+  button {
+    padding: 10px 15px; 
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    display: block; 
+    margin: 20px auto; 
+    column-count: 2;
+    justify-content: end;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>

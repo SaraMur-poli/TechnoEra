@@ -1,74 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechnoEra University</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../CSS/registerRoles.css">
+    <link rel="stylesheet" href="../CSS/profile.css">
+  <title>Perfil de <%= user.userName %></title>
 </head>
 <body>
-    <div class = "sidebar">
-        <div class = "top">
-            <div class="logo">
-                <i class = "bx bxl-codepen"></i>
-                <span>TechnoEra</span>
-            </div>
-            <i class = "bx bx-menu" id = "btn"></i>
-        </div>
-        <div class="user">
-            <img src="../images/user-image.jpg" alt="userpht" class = "user-img">
-            <div>
-                <p class = "bold">Username</p>
-                <p>Rol</p>
-            </div>
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <i class = "bx bx-user-pin"></i>
-                    <span class= "nav-item">Profile</span>
-                </a>
-                <span class = "tooltip">Profile</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class = "bx bx-user-check"></i>
-                    <span class= "nav-item">Management</span>
-                </a>
-                <span class = "tooltip">Management</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class = "bx bx-id-card"></i>
-                    <span class= "nav-item">Registration</span>
-                </a>
-                <span class = "tooltip">Registration</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class = "bx bx-plus-medical"></i>
-                    <span class= "nav-item">News</span>
-                </a>
-                <span class = "tooltip">News</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class = "bx bx-log-out"></i>
-                    <span class= "nav-item">Logout</span>
-                </a>
-                <span class = "tooltip">Logout</span>
-            </li>
-        </ul>
-    </div>
-
-    <div class="container">
-        <header>
-            <h1>Register Student</h1>
-            <hr>
-        <header>
-        <div class="main-content">
-            <form action="http://localhost:3000/registerStudents" method="post" id="registerStudent">
+  <div class="profile-container">
+    <h1>Perfil de <%= user.userName %></h1>
+    <form action="/update-profile" method="POST">
+        <div class="profile-details">
+            <% if (role === 'student') { %>
                 <label>Names:
                     <div>
                         <input type="text" name = "names" placeholder="Names" required autofocus="" pattern=".{2,20}" title="Debe tener entre 2 y 20 caracteres.">
@@ -164,11 +108,175 @@
                     <input type="password" name = "password" placeholder="Password" required autofocus="" pattern=".{8,20}" title="Debe tener entre 8 y 20 caracteres.">
                     </div>
                 </label> 
-            </form>
-            <button type="submit" form="registerStudent">Send</button>
-        </div>
-    </div>
+            
+            <% } else if (role === 'teacher') { %>
+              <label>Names:
+                <p> <%= info.names %></p>
+              </label>
+              <label>Last Names:
+                <p> <%= info.lastNames %></p>
+              </label>
+              <label>ID type:
+                <p> <%= info.idType %></p>
+              </label>
+              <label>ID:
+                <p> <%= info.id %></p>
+              </label>
+              <label>Email::
+                <p> <%= info.email %></p>
+              </label>
+              <label>Gender:
+                <p> <%= info.gender %></p>
+              </label>
+              <label>Date of birth:
+                <p> <%= info.dateOfBirth %></p>
+              </label>
+              <label>Address:
+                <p> <%= info.address %></p>
+              </label>
+              <label>Cell number:
+                <p> <%= info.cellNumber %></p>
+              </label>
+              <label>Type of contract:
+                <p> <%= info.typeOfContract %></p>
+              </label>
+              <button onclick="location.href='http://127.0.0.1:5500/HTML/landingTech.html'">Back</button>
+              <button>Profile editor</button>
+      
+            <% } else if (role === 'manager') { %>
+              <label>Names:
+                <p> <%= info.names %></p>
+              </label>
+              <label>Last Names:
+                <p> <%= info.lastNames %></p>
+              </label>
+              <label>ID type:
+                <p> <%= info.idType %></p>
+              </label>
+              <label>ID:
+                <p> <%= info.id %></p>
+              </label>
+              <label>Email::
+                <p> <%= info.email %></p>
+              </label>
+              <label>Gender:
+                <p> <%= info.gender %></p>
+              </label>
+              <label>Date of birth:
+                <p> <%= info.dateOfBirth %></p>
+              </label>
+              <label>Address:
+                <p> <%= info.address %></p>
+              </label>
+              <label>Cell number:
+                <p> <%= info.cellNumber %></p>
+              </label>
+              <label>Office:
+                <p> <%= info.office %></p>
+              </label>
+              <button onclick="location.href='http://127.0.0.1:5500/HTML/landingMan.html'">Back</button>
+              <button>Profile editor</button>
+      
+            <% } else if (role === 'admin') { %>
+              <label>Names:
+                <p> <%= info.names %></p>
+              </label>
+              <label>Last Names:
+                <p> <%= info.lastNames %></p>
+              </label>
+              <label>ID type:
+                <p> <%= info.idType %></p>
+              </label>
+              <label>ID:
+                <p> <%= info.id %></p>
+              </label>
+              <label>Email::
+                <p> <%= info.email %></p>
+              </label>
+              <label>Gender:
+                <p> <%= info.gender %></p>
+              </label>
+              <label>Date of birth:
+                <p> <%= info.dateOfBirth %></p>
+              </label>
+              <label>Address:
+                <p> <%= info.address %></p>
+              </label>
+              <label>Cell number:
+                <p> <%= info.cellNumber %></p>
+              </label>
+              <button onclick="location.href='http://127.0.0.1:5500/HTML/landingAdmin.html'">Back</button>
+              <button>Profile editor</button>
+      
+            <% } %>
+          </div>
+          <button type="button" onclick="location.href='http://127.0.0.1:5500/HTML/landing.html'">Back</button>
+          <button type="submit">Save Changes</button>
+    </form>    
+    
+</div>
+  <script src="../Script/profile.js"></script>
 </body>
-<script src="../Script/menu.js"></script>
-<script src="../Script/registerStudents.js"></script>
 </html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif; 
+    background-color: #134e70;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile-container {
+    width: 80%; 
+    max-width: 600px; 
+    margin: 50px auto; 
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+  }
+  
+  
+  h1 {
+    color:#134e70;
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+
+  label{
+    color: #134e70;
+  }
+  
+  
+  .profile-details {
+    margin-top: 20px; 
+    column-count: 2; 
+    column-gap: 20px;
+  }
+  
+  
+  .profile-details p {
+    font-size: 18px;
+    margin: 10px 0; 
+    color: black; 
+  }
+  
+  button {
+    padding: 10px 15px; 
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    display: block; 
+    margin: 20px auto; 
+    column-count: 2;
+    justify-content: end;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
