@@ -9,3 +9,7 @@ btn.onclick = function()
 document.getElementById('registration').addEventListener('click', function() {
     window.location.href = '../HTML/register.html';
 });
+
+document.getElementById('logout').addEventListener('click', function() {
+    window.location.href = '../HTML/login.html';
+});

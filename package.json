@@ -84,6 +84,7 @@
     "statuses": "^2.0.1",
     "string_decoder": "^1.1.1",
     "supports-color": "^7.2.0",
+    "technoera": "file:",
     "toidentifier": "^1.0.1",
     "type-is": "^1.6.18",
     "unpipe": "^1.0.0",
