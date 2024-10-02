@@ -60,44 +60,44 @@
                 <hr>
             </header>
         <div class="container">
-            <form id="sForm" action="" method="post"> 
+            <form id="sForm" action="http://localhost:3000/subjects" method="post"> 
                 <label>Subject ID:
                     <div>
-                        <input type="text" id="sID" placeholder="ID" required autofocus="">
+                        <input type="text" id="sID" name="sID" placeholder="ID" required autofocus="">
                     </div>
                 </label>
                 <label>Subject name:
                     <div>
-                        <input type="text" id="sName" placeholder="Name" required autofocus="">
+                        <input type="text" id="sName" name="sName" placeholder="Name" required autofocus="">
                     </div>
                 </label>
                 <label>Teachers name:
                     <div>
-                        <input type="text" id="tName" placeholder="Teacher" required autofocus="">
+                        <input type="text" id="tName" name="tName" placeholder="Teacher" required autofocus="">
                     </div>
                 </label>
                 <label>Select the day/days:
-                    <div class="select">
-                        <input type="checkbox" name="option">
+                    <div class="select" name="days[]">
+                        <input type="checkbox" name="days[]" value="Monday">
                         <label>Monday</label>
-                        <input type="checkbox" name="option">
+                        <input type="checkbox" name="days[]" value="Tuesday">
                         <label>Tuesday</label>
-                        <input type="checkbox" name="option">
+                        <input type="checkbox" name="days[]" value="Wednesday">
                         <label>Wednesday</label>
-                        <input type="checkbox" name="option">
+                        <input type="checkbox" name="days[]" value="Thursday">
                         <label>Thursday</label>
-                        <input type="checkbox" name="option">
+                        <input type="checkbox" name="days[]" value="Friday">
                         <label>Friday</label>
-                        <input type="checkbox" name="option">
+                        <input type="checkbox" name="days[]" value="Saturday">
                         <label>Satuday</label>
                     </div>
                 </label>
                 <label>Hour:
-                    <input type="time" id="sTime" required autofocus="">
+                    <input type="time" id="sTime" name="sTime" required autofocus="">
                 </label>
                 <label>Classroom:
                     <div>
-                        <input type="text" id="sClassroom" placeholder="Classroom" required autofocus="">
+                        <input type="text" id="sClassroom" name="sClassroom" placeholder="Classroom" required autofocus="">
                     </div>
                 </label> 
                 <button type="submit">Submit</button>  
@@ -110,3 +110,36 @@
 <script src="../Script/subjects.js"></script>
 <script src="../Script/landingMan.js"></script>
 </html>
+
+<script>
+let btn = document.querySelector('#btn');
+let sidebar = document.querySelector('.sidebar');
+
+btn.onclick = function()
+{
+    sidebar.classList.toggle('active');
+};
+
+document.getElementById('sForm').addEventListener('submit', function(event) {
+    const checkboxes = document.querySelectorAll('input[name="days[]"]:checked');
+    const errorMessage = document.getElementById('error-message');
+  
+    if (checkboxes.length < 1 || checkboxes.length > 3) {
+      event.preventDefault();
+      errorMessage.textContent = "You must select at least one day, Maximum 3";
+    } else {
+      errorMessage.textContent = "";
+    }
+});
+
+document.getElementById('timeForm').addEventListener('submit', function(event) {
+    const inputTime = document.getElementById('sTime').value;
+    const errorMessage = document.getElementById('error-message');
+  
+    if (!inputTime) {
+      errorMessage.textContent = "Please enter a valid time";
+      event.preventDefault();
+      return;
+    }
+});
+</script>
