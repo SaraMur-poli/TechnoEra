@@ -6,24 +6,21 @@ btn.onclick = function()
     sidebar.classList.toggle('active');
 };
 
-document.getElementById('download').addEventListener('click', () => {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    
-    doc.setFontSize(18);
-    doc.text('University schedule', 14, 20);
-    
-    const table = document.getElementById('schedule');
-    const rows = Array.from(table.querySelectorAll('tr')).map(row => {
-        return Array.from(row.querySelectorAll('th, td')).map(cell => cell.innerText);
-    });
-    
-    doc.autoTable({
-        head: [rows[0]],
-        body: rows.slice(1),
-        startY: 30,
-        theme: 'striped'
-    });
-
-    doc.save('Uni-schedule.pdf');
+document.getElementById('subjects').addEventListener('click', function() {
+    window.location.href = '../HTML/academic.html';
 });
+
+document.getElementById('logout').addEventListener('click', function() {
+    window.location.href = '../HTML/login.html';
+});
+
+document.getElementById('user-image').addEventListener('click', function() {
+    window.location.href = '../HTML/landing.html';
+});
+
+document.getElementById('registration').addEventListener('click', function() {
+    window.location.href = '../HTML/enrollment.html';
+});
+
+document.getElementById('enter').addEventListener('click', function() {
+    window.location.href = '../HTML/landing.html';
