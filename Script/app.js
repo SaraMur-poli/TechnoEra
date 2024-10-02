@@ -19,9 +19,6 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
 app.use(loginRouter);
 app.use(perfilRouter);
 
